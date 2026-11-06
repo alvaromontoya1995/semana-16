@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingenio 3D | Impresión 3D y Manufactura Aditiva en Medellín</title>
-    <meta name="description" content="Taller de manufactura aditiva y modelado tridimensional en Medellín, Colombia. Ideas que cobran vida en 3D.">
-    <meta name="theme-color" content="#0B0F19">
-
-    <!-- Fonts & Icons -->
+    <title>Nosotros | Ingenio 3D - Manufactura Aditiva & Prototipado</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Space Grotesk & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -25,8 +22,7 @@
                             dark: '#0B0F19',
                             surface: '#161B26',
                             card: '#1E2433',
-                            orange: '#00E5FF',
-                            amber: '#00B4D8'
+                            accent: '#00E5FF'
                         }
                     },
                     fontFamily: {
@@ -38,242 +34,205 @@
         }
     </script>
     <style>
-        body { background-color: #0B0F19; color: #F3F4F6; font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
-        .glow-cyan { box-shadow: 0 0 30px rgba(0, 229, 255, 0.25); }
-        .glass-header { background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(12px); }
+        .glow-cyan { box-shadow: 0 0 50px rgba(0, 229, 255, 0.12); }
+        .glow-subtle { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+        .glass-panel { background: rgba(22, 27, 38, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-card { background: rgba(30, 36, 51, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-border { border: 1px solid transparent; background-image: linear-gradient(#161B26, #161B26), linear-gradient(to bottom right, rgba(0, 229, 255, 0.4), rgba(255, 255, 255, 0.05)); background-origin: border-box; background-clip: padding-box, border-box; }
     </style>
 </head>
-<body class="bg-brand-dark text-slate-100 antialiased">
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-accent selection:text-slate-950">
 
-    <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center p-0.5 glow-cyan">
-                        <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
-                            <i class="fa-solid fa-cube text-brand-orange text-lg"></i>
-                        </div>
-                    </div>
-                    <span class="font-heading font-bold text-xl text-white tracking-wider">INGENIO <span class="text-brand-orange">3D</span></span>
+    <!-- Header Fijo -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-heading font-bold text-xl tracking-wider text-white">
+                INGENIO <span class="text-brand-accent">3D</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center text-xs font-semibold uppercase tracking-widest">
+                <a href="index.html" class="text-slate-300 hover:text-brand-accent transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-brand-accent transition-colors">Nosotros</a>
+                <a href="servicios.html" class="text-slate-300 hover:text-brand-accent transition-colors">Servicios &amp; Catálogo</a>
+                <a href="contacto.html" class="text-slate-300 hover:text-brand-accent transition-colors">Contacto</a>
+            </nav>
+            <div>
+                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar%20un%20proyecto" target="_blank" class="px-5 py-2.5 rounded-xl bg-brand-accent text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-cyan-300 transition-all shadow-lg shadow-cyan-500/10">
+                    Cotizar Proyecto
                 </a>
-
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-xs font-bold uppercase tracking-wider text-brand-orange">Inicio</a>
-                    <a href="nosotros.html" class="text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-brand-orange transition-colors">Nosotros</a>
-                    <a href="servicios.html" class="text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-brand-orange transition-colors">Servicios &amp; Productos</a>
-                    <a href="contacto.html" class="text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-brand-orange transition-colors">Contacto</a>
-                </nav>
-
-                <div class="hidden md:block">
-                    <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-5 py-2.5 rounded-xl bg-brand-orange text-slate-950 font-bold text-xs uppercase hover:bg-cyan-300 transition-colors">
-                        Cotización Rápida
-                    </a>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-36 pb-24 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-6">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase">
-                    Taller de Impresión 3D en Medellín
+    <!-- Hero Nosotros -->
+    <section class="pt-40 pb-20 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-brand-accent/30 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-microchip text-[10px]"></i> Taller de Manufactura &amp; Diseño
                 </div>
-                <h1 class="text-4xl sm:text-6xl font-bold text-white leading-tight">
-                    Ideas que cobran <br>
-                    <span class="text-brand-orange">VIDA real en 3D</span>
+                <h1 class="text-4xl sm:text-6xl font-bold font-heading text-white tracking-tight leading-[1.15]">
+                    Ingeniería de precisión con <span class="text-brand-accent">vocación artesanal.</span>
                 </h1>
-                <p class="text-slate-300 text-lg">
-                    Transformamos prototipos, modelos digitales y conceptos creativos en objetos tangibles con tecnología FDM y Resina SLA de alta precisión.
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
+                    En <strong>Ingenio 3D</strong> fusionamos el rigor técnico del modelado en computadora con el cuidado minucioso en cada pieza fabricada. Nos apasiona dar vida a proyectos que requieren exactitud, estética y resistencia.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-                    <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-8 py-4 rounded-xl bg-brand-orange text-slate-950 font-bold text-center hover:bg-cyan-300 transition-all">
-                        Cotizar por WhatsApp
-                    </a>
-                    <a href="servicios.html" class="px-8 py-4 rounded-xl bg-brand-surface border border-slate-700 text-white font-semibold text-center hover:border-brand-orange transition-all">
-                        Ver Productos
-                    </a>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 bg-brand-surface/80 px-4 py-2.5 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-location-dot text-brand-accent"></i> Medellín, Colombia
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 bg-brand-surface/80 px-4 py-2.5 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-cubes text-brand-accent"></i> Tecnologías FDM / SLA
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard de Resumen Técnico (Reemplazo visual moderno) -->
+            <div class="lg:col-span-5">
+                <div class="gradient-border rounded-3xl p-8 glow-cyan space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400 font-heading">Especificaciones del Taller</span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent animate-ping"></span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-4 rounded-2xl space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold uppercase">Tolerancia FDM</span>
+                            <p class="text-xl font-bold font-heading text-white">± 0.1 mm</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold uppercase">Capa Resina SLA</span>
+                            <p class="text-xl font-bold font-heading text-brand-accent">0.05 mm</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold uppercase">Filamentos</span>
+                            <p class="text-sm font-bold font-heading text-white">PLA / PETG / TPU</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold uppercase">Sistemas</span>
+                            <p class="text-sm font-bold font-heading text-white">Multicolor AMS</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-normal pt-2 border-t border-slate-800">
+                        Monitoreo continuo de impresión para garantizar la adherencia de capa y estabilidad térmica en cada producción.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Estadísticas Destacadas -->
-    <section class="py-12 bg-brand-surface border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="space-y-1">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-brand-orange font-heading">+500</h3>
-                    <p class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Piezas Impresas</p>
+    <!-- Sección: Nuestra Historia / Manifiesto -->
+    <section class="py-20 border-y border-slate-800/80 bg-brand-surface/20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 space-y-4">
+                <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest">Nuestra Filosofía</h2>
+                <h3 class="text-3xl font-bold font-heading text-white">Más que imprimir, creamos soluciones reales.</h3>
+            </div>
+            <div class="md:col-span-7 space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p>
+                    <strong>Ingenio 3D</strong> no surgió solo como una idea de negocio, sino como la respuesta a una necesidad constante: convertir diseños de computadora y maquetas conceptuales en piezas funcionales de alta durabilidad sin pasar por los altísimos costos de la industria tradicional.
+                </p>
+                <p>
+                    Desde nuestro taller en Medellín atendemos tanto a emprendedores y creadores que buscan litofanías o figuras de colección con un acabado limpio, hasta ingenieros o técnicos que necesitan un repuesto discontinuado con dimensiones milimétricas exactas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares de Valor (Tarjetas Premium) -->
+    <section class="py-24 max-w-7xl mx-auto px-6 space-y-12">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+            <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest">Lo que nos distingue</h2>
+            <h3 class="text-3xl font-bold font-heading text-white">Estándares de Calidad en Cada Trabajo</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-panel p-8 rounded-3xl space-y-4 hover:border-brand-accent/40 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-ruler-combined"></i>
                 </div>
-                <div class="space-y-1">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-brand-orange font-heading">100%</h3>
-                    <p class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Personalización</p>
+                <h4 class="text-xl font-bold font-heading text-white">Control Dimensional</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Verificamos cada pieza impresa contra el modelo original (.STL/.STEP) para asegurar tolerancias exactas en ensambles y piezas mecánicas.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl space-y-4 hover:border-brand-accent/40 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-fill-drip"></i>
                 </div>
-                <div class="space-y-1">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-brand-orange font-heading">0.05mm</h3>
-                    <p class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Precisión en Resina</p>
+                <h4 class="text-xl font-bold font-heading text-white">Post-procesado Pro</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Curado UV para resinas, retiro cuidadoso de soportes, lijado gradual y opciones de acabado en pintura para piezas de exhibición.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl space-y-4 hover:border-brand-accent/40 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-headset"></i>
                 </div>
-                <div class="space-y-1">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-brand-orange font-heading">Medellín</h3>
-                    <p class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Envíos a Colombia</p>
+                <h4 class="text-xl font-bold font-heading text-white">Asesoría Directa</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Te aconsejamos la orientacion de impresión, el porcentaje de relleno (*infill*) y el material adecuado según el uso final de tu diseño.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flujo de Trabajo (Paso a Paso Interactivo) -->
+    <section class="py-20 bg-brand-surface/30 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 space-y-16">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest">Proceso Garantizado</h2>
+                <h3 class="text-3xl font-bold font-heading text-white">Del Archivo Digital al Objeto Final</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-brand-accent space-y-3">
+                    <span class="text-3xl font-bold font-heading text-brand-accent">01</span>
+                    <h4 class="text-base font-bold text-white font-heading">Revisión de Malla</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Analizamos que el archivo 3D esté cerrado (hermético) y listo para laminación sin errores.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-brand-accent space-y-3">
+                    <span class="text-3xl font-bold font-heading text-brand-accent">02</span>
+                    <h4 class="text-base font-bold text-white font-heading">Selección Técnica</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Elegimos altura de capa, velocidad y soportes según la geometría del modelo.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-brand-accent space-y-3">
+                    <span class="text-3xl font-bold font-heading text-brand-accent">03</span>
+                    <h4 class="text-base font-bold text-white font-heading">Manufactura 3D</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Impresión continua supervisada con control activo de temperatura por capa.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-brand-accent space-y-3">
+                    <span class="text-3xl font-bold font-heading text-brand-accent">04</span>
+                    <h4 class="text-base font-bold text-white font-heading">Control &amp; Despacho</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Limpieza final, empacado seguro y envío inmediato o retiro en Medellín.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Características & Ventajas -->
-    <section class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">¿Por qué elegir Ingenio 3D?</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white">Manufactura aditiva sin límites técnicos</h3>
-                <p class="text-slate-300 text-sm">Combinamos atención minuciosa al acabado de cada capa con materiales certificados para durabilidad y estética superior.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-800 space-y-4 hover:border-brand-orange/50 transition-colors">
-                    <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
-                        <i class="fa-solid fa-sliders text-brand-orange text-xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white">Personalización 100%</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Adaptamos escalas, grosores de relleno, acabados de superficie y combinación de colores para que el resultado sea exacto a lo planteado.</p>
-                </div>
-                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-800 space-y-4 hover:border-brand-orange/50 transition-colors">
-                    <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
-                        <i class="fa-solid fa-bolt text-brand-orange text-xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white">Prototipado Ágil</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Obtén tus primeras piezas o prototipos mecánicos en tiempos récord para iterar tus diseños sin retrasar tu flujo de proyecto.</p>
-                </div>
-                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-800 space-y-4 hover:border-brand-orange/50 transition-colors">
-                    <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
-                        <i class="fa-solid fa-layer-group text-brand-orange text-xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white">Materiales de Calidad</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Trabajamos con PLA biodegradable ecológico, PETG de alta resistencia mecánica e industrial, y Resina SLA para microdetalles.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Catálogo Destacado en Inicio -->
-    <section class="py-20 bg-brand-surface/40 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
-                <div>
-                    <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Productos Populares</h2>
-                    <h3 class="text-3xl font-bold text-white mt-1">Lo más solicitado en nuestro taller</h3>
-                </div>
-                <a href="servicios.html" class="text-xs font-bold text-brand-orange uppercase tracking-wider hover:underline flex items-center gap-2">
-                    Ver todo el catálogo <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-brand-surface rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
-                    <div class="space-y-3">
-                        <span class="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/30 text-[10px] font-bold uppercase rounded-full">Resina &amp; PLA</span>
-                        <h4 class="text-xl font-bold text-white">Figuras &amp; Estatuas Coleccionables</h4>
-                        <p class="text-xs text-slate-400">Modelos tridimensionales con acabados limpios de tus personajes favoritos o esculturas originales.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Desde <strong class="text-brand-orange text-sm">$30.000 COP</strong></span>
-                        <a href="https://wa.me/573137807079?text=Cotizar%20Figura" target="_blank" class="px-4 py-2 bg-brand-orange text-slate-950 font-bold text-xs rounded-lg hover:bg-cyan-300 transition-colors">Cotizar</a>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
-                    <div class="space-y-3">
-                        <span class="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/30 text-[10px] font-bold uppercase rounded-full">Efecto Retroiluminado</span>
-                        <h4 class="text-xl font-bold text-white">Litofanías Personalizadas</h4>
-                        <p class="text-xs text-slate-400">Transformamos cualquier fotografía en una placa tridimensional en relieve que cobra vida al ponerle luz por detrás.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Desde <strong class="text-brand-orange text-sm">$100.000 COP</strong></span>
-                        <a href="https://wa.me/573137807079?text=Cotizar%20Litofania" target="_blank" class="px-4 py-2 bg-brand-orange text-slate-950 font-bold text-xs rounded-lg hover:bg-cyan-300 transition-colors">Cotizar</a>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
-                    <div class="space-y-3">
-                        <span class="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/30 text-[10px] font-bold uppercase rounded-full">Diseño Geek / POP</span>
-                        <h4 class="text-xl font-bold text-white">Figuras Estilo "Funko Pop"</h4>
-                        <p class="text-xs text-slate-400">Versiones caricaturizadas y personalizadas de ti, tus amigos o mascotas impresas en alta resolución.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Desde <strong class="text-brand-orange text-sm">$90.000 COP</strong></span>
-                        <a href="https://wa.me/573137807079?text=Cotizar%20Funko" target="_blank" class="px-4 py-2 bg-brand-orange text-slate-950 font-bold text-xs rounded-lg hover:bg-cyan-300 transition-colors">Cotizar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios de Clientes -->
-    <section class="py-20 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Opiniones</h2>
-                <h3 class="text-3xl font-bold text-white">Lo que dicen nuestros clientes en Medellín</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-4">
-                    <div class="flex text-amber-400 text-xs gap-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">"La litofanía que encargué para el aniversario quedó espectacular. La atención por WhatsApp fue súper rápida y me asesoraron con el tamaño de la foto."</p>
-                    <div class="pt-2 border-t border-slate-800">
-                        <strong class="block text-xs text-white">Camilo R.</strong>
-                        <span class="text-[10px] text-slate-500">Coleccionista — Medellín</span>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-4">
-                    <div class="flex text-amber-400 text-xs gap-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">"Mandamos a imprimir unos prototipos de carcasas mecánicas en PETG y la precisión dimensional fue perfecta. Súper recomendados para emprendedores."</p>
-                    <div class="pt-2 border-t border-slate-800">
-                        <strong class="block text-xs text-white">Mariana V.</strong>
-                        <span class="text-[10px] text-slate-500">Diseñadora Industrial</span>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-4">
-                    <div class="flex text-amber-400 text-xs gap-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">"El letrero personalizado para nuestro stand quedó impecable. Los colores son idénticos a nuestro logo corporativo."</p>
-                    <div class="pt-2 border-t border-slate-800">
-                        <strong class="block text-xs text-white">Esteban G.</strong>
-                        <span class="text-[10px] text-slate-500">Creador de Contenido</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call To Action Final -->
-    <section class="py-16 bg-gradient-to-r from-brand-surface to-slate-900 border-t border-slate-800 text-center">
-        <div class="max-w-4xl mx-auto px-4 space-y-6">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white">¿Tienes un modelo 3D o una idea lista?</h2>
-            <p class="text-slate-300 text-sm max-w-2xl mx-auto">Envíanos tu archivo .STL, .OBJ o simplemente la foto/idea que quieres fabricar. Te enviamos una cotización con tiempo estimado en minutos.</p>
+    <!-- Banner Call to Action Final -->
+    <section class="py-20 max-w-7xl mx-auto px-6">
+        <div class="glass-panel rounded-3xl p-10 text-center space-y-6 border border-brand-accent/30 glow-cyan">
+            <h3 class="text-3xl font-bold font-heading text-white">¿Quieres cotizar o consultar sobre un proyecto?</h3>
+            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">
+                Envíanos tu archivo 3D o comparte tu idea por WhatsApp. Te responderemos rápidamente con una estimación de costo y tiempo.
+            </p>
             <div class="pt-2">
-                <a href="contacto.html" class="inline-block px-8 py-4 rounded-xl bg-brand-orange text-slate-950 font-bold hover:bg-cyan-300 transition-colors">
-                    Solicitar Presupuesto Directo
+                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar%20un%20proyecto" target="_blank" class="inline-block px-8 py-4 rounded-xl bg-brand-accent text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-cyan-300 transition-all shadow-lg shadow-cyan-500/20">
+                    Hablar por WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-surface border-t border-slate-800 py-10 text-center text-xs text-slate-400">
-        <p>&copy; 2026 Ingenio 3D — Todos los derechos reservados. Medellín, Colombia.</p>
+    <footer class="bg-brand-surface border-t border-slate-800 py-12 text-center text-xs text-slate-500 space-y-4">
+        <p class="font-heading font-bold text-sm text-white tracking-widest">INGENIO <span class="text-brand-accent">3D</span></p>
+        <p>&copy; 2026 Ingenio 3D — Medellín, Colombia. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
