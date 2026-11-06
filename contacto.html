@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Ingenio 3D Medellín</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            surface: '#161B26',
+                            card: '#1E2433',
+                            orange: '#00E5FF',
+                            amber: '#00B4D8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0B0F19; color: #F3F4F6; font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        .glow-cyan { box-shadow: 0 0 30px rgba(0, 229, 255, 0.25); }
+        .glass-header { background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased">
+
+    <!-- Header Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-heading font-bold text-xl text-white">INGENIO <span class="text-brand-orange">3D</span></a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Inicio</a>
+                <a href="nosotros.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Nosotros</a>
+                <a href="servicios.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Servicios &amp; Productos</a>
+                <a href="contacto.html" class="text-xs font-bold uppercase text-brand-orange">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Contacto Directo -->
+    <section class="pt-36 pb-20 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <div class="space-y-6">
+                <h1 class="text-xs font-bold text-brand-orange uppercase">Contacto Directo</h1>
+                <h2 class="text-4xl font-bold text-white">¿Tienes una idea o proyecto en mente?</h2>
+                <p class="text-slate-300 text-sm leading-relaxed">Comunícate con nuestro equipo en Medellín para cotizaciones de archivos STL, diseño o producción por volumen.</p>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-4 text-sm text-slate-300">
+                        <i class="fa-solid fa-location-dot text-brand-orange text-lg"></i>
+                        <span>Medellín, Antioquia, Colombia</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-slate-300">
+                        <i class="fa-solid fa-phone text-brand-orange text-lg"></i>
+                        <span>+57 313 780 7079</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-slate-300">
+                        <i class="fa-solid fa-envelope text-brand-orange text-lg"></i>
+                        <span>ingenio3d@outlook.es</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-slate-300">
+                        <i class="fa-brands fa-instagram text-brand-orange text-lg"></i>
+                        <span>@ingenio3d</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario directo de WhatsApp -->
+            <div class="bg-brand-surface p-8 rounded-2xl border border-slate-800">
+                <h3 class="text-xl font-bold text-white mb-6">Enviar Mensaje Directo</h3>
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1">Tu Nombre</label>
+                        <input type="text" id="name" required class="w-full p-3 rounded-xl bg-brand-dark border border-slate-700 text-white text-xs focus:border-brand-orange outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1">Teléfono / WhatsApp</label>
+                        <input type="tel" id="phone" required class="w-full p-3 rounded-xl bg-brand-dark border border-slate-700 text-white text-xs focus:border-brand-orange outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1">Descripción del Proyecto</label>
+                        <textarea id="message" rows="4" required class="w-full p-3 rounded-xl bg-brand-dark border border-slate-700 text-white text-xs focus:border-brand-orange outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-brand-orange text-slate-950 font-bold text-xs uppercase hover:bg-cyan-300 transition-colors">
+                        Enviar a WhatsApp
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Ubicación en Google Maps -->
+    <section class="pb-20 max-w-7xl mx-auto px-4">
+        <div class="bg-brand-surface rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Ubicación del Taller</h2>
+                    <h3 class="text-2xl font-bold text-white mt-1">Encuéntranos en Medellín</h3>
+                    <p class="text-xs text-slate-400">Atención presencial previa cita y recepción de modelos/materiales.</p>
+                </div>
+                <a href="https://maps.google.com/?q=Medellin,Colombia" target="_blank" class="px-4 py-2 bg-slate-800 text-brand-orange border border-brand-orange/30 rounded-xl text-xs font-bold hover:bg-brand-orange hover:text-slate-950 transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps
+                </a>
+            </div>
+
+            <!-- Mapa Interactivo Integrado -->
+            <div class="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-800">
+                <iframe 
+                    class="w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.7407386008!2d-75.64436531350616!3d6.2442031121087815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cf92b5b5ac6!2sMedell%C3%ADn%2C%20Antioquia%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-surface border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Ingenio 3D — Medellín, Colombia.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            const text = encodeURIComponent(`Hola Ingenio 3D, mi nombre es ${name} (${phone}). Mensaje: ${message}`);
+            window.open(`https://wa.me/573137807079?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>

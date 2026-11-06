@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios &amp; Productos | Ingenio 3D</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            surface: '#161B26',
+                            card: '#1E2433',
+                            orange: '#00E5FF',
+                            amber: '#00B4D8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0B0F19; color: #F3F4F6; font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        .glow-cyan { box-shadow: 0 0 30px rgba(0, 229, 255, 0.25); }
+        .glass-header { background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased">
+
+    <!-- Header Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center p-0.5 glow-cyan">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-cube text-brand-orange text-lg"></i>
+                    </div>
+                </div>
+                <span class="font-heading font-bold text-xl text-white tracking-wider">INGENIO <span class="text-brand-orange">3D</span></span>
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Inicio</a>
+                <a href="nosotros.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Nosotros</a>
+                <a href="servicios.html" class="text-xs font-bold uppercase text-brand-orange">Servicios &amp; Productos</a>
+                <a href="contacto.html" class="text-xs font-bold uppercase text-slate-300 hover:text-brand-orange">Contacto</a>
+            </nav>
+            <div>
+                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-5 py-2.5 rounded-xl bg-brand-orange text-slate-950 font-bold text-xs uppercase hover:bg-cyan-300 transition-colors hidden md:block">
+                    Cotización Rápida
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Presentación Servicios -->
+    <section class="pt-36 pb-12 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase">
+                Servicios &amp; Soluciones de Manufactura Aditiva
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">Catálogo de Productos &amp; Servicios 3D</h1>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Desde prototipado funcional de ingeniería hasta figuras decorativas de alta definición. Explora nuestras tecnologías, materiales y herramientas de cotización.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: Categorías de Productos & Servicios -->
+    <section class="py-12 max-w-7xl mx-auto px-4 border-t border-slate-800/60">
+        <div class="flex items-center justify-between mb-10">
+            <div>
+                <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Catálogo Principal</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Productos &amp; Modelos Personalizados</h3>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-chess-knight text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Figuras &amp; Coleccionables</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Impresión en Resina SLA y Filamento PLA de alta definición para miniaturas, estatuas de personajes, cosplay y piezas coleccionables con post-procesado y curado UV.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Altura de capa hasta 0.05 mm</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Remoción limpia de soportes</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Desde $30.000 COP</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20Figura" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Litofanías Personalizadas</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Convertimos tus fotografías más especiales en placas tridimensionales retroiluminadas. La variación en el grosor de la impresión revela la imagen con luz posterior.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Incluye base/soporte si se requiere</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Opción de luz LED blanca o cálida</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Desde $100.000 COP</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20Litofania" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-font text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Letreros &amp; Logos 3D</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Nombres, identificadores de escritorio y logotipos corporativos en relieve con combinaciones multicapa de colores para negocios, eventos o señalética.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Amplia gama cromática en PLA/PETG</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Montaje fácil para pared o mesa</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Desde $45.000 COP</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Letrero%203D" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-user-astronaut text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Figuras Estilo "Funko Pop"</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Recreamos figuras caricaturizadas de ti mismo, amigos, familiares o mascotas en modelos 3D únicos preparados para exhibición.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Diseño personalizado desde fotos</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Opción pintada o monocolor</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Desde $90.000 COP</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Funko%203D" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-box-archive text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Organizadores de Escritorio</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Soportes para auriculares, portalápices geométricos, organizadores de cables y módulos a medida para optimizar tu área de trabajo.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Diseños funcionales ergonómicos</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Alta durabilidad en PLA/PETG</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Desde $30.000 COP</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Organizador" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-slate-800 p-6 space-y-4 hover:border-brand-orange/40 transition-all flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                        <i class="fa-solid fa-gears text-brand-orange text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Prototipado Mecánico &amp; Piezas</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Fabricación de carcasas, repuestos discontinuados, engranajes y piezas de prueba en PETG de alta resistencia térmica e impacto.</p>
+                    <ul class="text-[11px] text-slate-300 space-y-1 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Tolerancias exactas para ensambles</li>
+                        <li><i class="fa-solid fa-check text-brand-orange mr-1"></i> Evaluación de infill y densidad</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="block text-brand-orange font-bold font-mono text-sm">Cotización a Medida</span>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Prototipo%20Mecanico" target="_blank" class="block w-full py-2.5 text-center bg-slate-800 rounded-xl text-xs font-bold text-white hover:bg-brand-orange hover:text-slate-950 transition-colors">Solicitar Cotización</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Servicios Especializados Adicionales -->
+    <section class="py-16 bg-brand-surface/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Servicios Complementarios</h2>
+                <h3 class="text-3xl font-bold text-white">Soluciones De Principio a Fin</h3>
+                <p class="text-xs text-slate-400">Te acompañamos en cada etapa de desarrollo de tu producto 3D.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <i class="fa-solid fa-cube text-brand-orange text-2xl"></i>
+                    <h4 class="text-base font-bold text-white">Modelado CAD 3D</h4>
+                    <p class="text-xs text-slate-400">Convertimos bosquejos, planos 2D o ideas en modelos tridimensionales optimizados para impresión.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <i class="fa-solid fa-spray-can text-brand-orange text-2xl"></i>
+                    <h4 class="text-base font-bold text-white">Post-procesado &amp; Pintura</h4>
+                    <p class="text-xs text-slate-400">Lijado de capas, aplicación de imprimante, pintura acrílica y sellado con laca protectora.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <i class="fa-solid fa-screwdriver-wrench text-brand-orange text-2xl"></i>
+                    <h4 class="text-base font-bold text-white">Ingeniería Inversa</h4>
+                    <p class="text-xs text-slate-400">Recreación digital de piezas físicas desgastadas o descontinuadas para su refabricación.</p>
+                </div>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <i class="fa-solid fa-boxes-packing text-brand-orange text-2xl"></i>
+                    <h4 class="text-base font-bold text-white">Producción en Serie</h4>
+                    <p class="text-xs text-slate-400">Capacidad para lotes medianos de piezas idénticas con tiempos de entrega coordinados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Calculadora Interactiva de Presupuesto -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="bg-brand-surface rounded-2xl border border-slate-800 p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Cotizador Interactivo</h2>
+                    <h3 class="text-3xl font-bold text-white">Estima el Costo de tu Impresión</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Selecciona el material y las horas estimadas de impresión para obtener un presupuesto aproximado en tiempo real.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 mb-2">Material / Tecnología</label>
+                            <select id="calc-material" class="w-full bg-brand-dark border border-slate-700 rounded-xl p-3 text-xs text-white focus:border-brand-orange outline-none">
+                                <option value="15000">Filamento PLA ($15.000 COP / hora)</option>
+                                <option value="20000">Filamento PETG Técnico ($20.000 COP / hora)</option>
+                                <option value="25000">Resina SLA Alta Definición ($25.000 COP / hora est.)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 mb-2">Horas Estimadas: <span id="hours-val" class="text-brand-orange font-mono">3 horas</span></label>
+                            <input type="range" id="calc-hours" min="1" max="24" value="3" class="w-full accent-cyan-400">
+                        </div>
+                        <div class="flex items-center gap-2 pt-2">
+                            <input type="checkbox" id="calc-post" class="accent-cyan-400">
+                            <label for="calc-post" class="text-xs text-slate-300">Incluir post-procesado / pulido (+ $15.000 COP)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-dark p-8 rounded-xl border border-slate-800 text-center space-y-6">
+                    <span class="text-xs text-slate-400 uppercase font-bold tracking-wider">Estimación Aproximada</span>
+                    <div class="text-4xl font-bold text-brand-orange font-mono" id="total-price">$45.000 COP</div>
+                    <p class="text-[11px] text-slate-500">Nota: Esta cifra es orientativa. El precio definitivo dependerá de la densidad de relleno (infill), el peso exacto en gramos y soportes de tu archivo .STL.</p>
+                    <a id="btn-calc-whatsapp" href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%203%20horas%20en%20PLA" target="_blank" class="block w-full py-3 bg-brand-orange text-slate-950 font-bold text-xs uppercase rounded-xl hover:bg-cyan-300 transition-colors">
+                        Cotizar Este Cálculo por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: Tabla Orientativa de Materiales y Tarifas -->
+    <section class="py-16 bg-brand-surface/40 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest">Guía Técnica de Materiales</h2>
+                <h3 class="text-3xl font-bold text-white">Tarifas Orientativas por Tecnología</h3>
+                <p class="text-xs text-slate-400">Los precios finales dependen del volumen del archivo (.STL), tiempo total de impresión y post-procesado requerido.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs text-slate-300 border-collapse">
+                    <thead>
+                        <tr class="bg-brand-surface border-b border-slate-700 text-brand-orange font-heading uppercase tracking-wider">
+                            <th class="p-4">Material / Tecnología</th>
+                            <th class="p-4">Tecnología Utilizada</th>
+                            <th class="p-4">Uso Recomendado</th>
+                            <th class="p-4">Ventajas Principales</th>
+                            <th class="p-4 text-right">Tarifa Base Est.</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 bg-brand-surface/60">
+                        <tr class="hover:bg-brand-surface transition-colors">
+                            <td class="p-4 font-bold text-white">Filamento PLA</td>
+                            <td class="p-4">FDM (Modelado por Depresión Fundida)</td>
+                            <td class="p-4">Figuras decorativas, organizadores, litofanías y prototipos visuales.</td>
+                            <td class="p-4 text-slate-400">Biodegradable, gran acabado estético de superficie y variedad de colores.</td>
+                            <td class="p-4 text-right font-mono font-bold text-brand-orange">$15.000 COP / hr</td>
+                        </tr>
+                        <tr class="hover:bg-brand-surface transition-colors">
+                            <td class="p-4 font-bold text-white">Filamento PETG</td>
+                            <td class="p-4">FDM Técnico</td>
+                            <td class="p-4">Piezas mecánicas, carcasas, repuestos y elementos de alto impacto.</td>
+                            <td class="p-4 text-slate-400">Alta durabilidad, flexión mecánica y flexibilidad frente al calor.</td>
+                            <td class="p-4 text-right font-mono font-bold text-brand-orange">$20.000 COP / hr</td>
+                        </tr>
+                        <tr class="hover:bg-brand-surface transition-colors">
+                            <td class="p-4 font-bold text-white">Resina Fotopolímera</td>
+                            <td class="p-4">SLA / LCD (Estereolitografía)</td>
+                            <td class="p-4">Miniaturas de juegos de mesa, joyería, figuras coleccionables de alto detalle.</td>
+                            <td class="p-4 text-slate-400">Máxima resolución de detalle sin líneas de capa visibles a simple vista.</td>
+                            <td class="p-4 text-right font-mono font-bold text-brand-orange">A Medida</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: Pasos para Cotizar y Requisitos de Archivo -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="bg-brand-surface rounded-2xl p-8 border border-slate-800 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                    <i class="fa-solid fa-file-code text-brand-orange text-lg"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">1. Formatos Compatibles</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Aceptamos modelos en formatos <strong>.STL, .OBJ, .3MF y .STEP</strong>. Si no posees el archivo 3D, podemos ayudarte a ubicarlo en repositorios abiertos o modelarlo desde cero.</p>
+            </div>
+            <div class="space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                    <i class="fa-solid fa-ruler-combined text-brand-orange text-lg"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">2. Dimensiones &amp; Escala</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Indícanos las medidas deseadas en milímetros o centímetros (Alto x Ancho x Profundo). Ajustamos la escala manteniendo las proporciones exactas del diseño.</p>
+            </div>
+            <div class="space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center">
+                    <i class="fa-solid fa-comments text-brand-orange text-lg"></i>
+                </div>
+                <h4 class="text-base font-bold text-white">3. Cotización Directa</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Envíanos tus especificaciones por WhatsApp o correo electrónico. Recibirás un desglose con tiempo de fabricación, consumo de material y costo total en minutos.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-surface border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Ingenio 3D — Medellín, Colombia.</p>
+    </footer>
+
+    <!-- Lógica JavaScript de la Calculadora -->
+    <script>
+        const matSelect = document.getElementById('calc-material');
+        const hoursInput = document.getElementById('calc-hours');
+        const hoursVal = document.getElementById('hours-val');
+        const postCheck = document.getElementById('calc-post');
+        const totalPrice = document.getElementById('total-price');
+        const btnCalc = document.getElementById('btn-calc-whatsapp');
+
+        function updateCalculator() {
+            const matCost = parseInt(matSelect.value);
+            const hours = parseInt(hoursInput.value);
+            const postCost = postCheck.checked ? 15000 : 0;
+            const total = (matCost * hours) + postCost;
+
+            hoursVal.textContent = hours + (hours === 1 ? ' hora' : ' horas');
+            totalPrice.textContent = '$' + total.toLocaleString('es-CO') + ' COP';
+
+            const matName = matSelect.options[matSelect.selectedIndex].text.split(' (')[0];
+            const msg = encodeURIComponent(`Hola Ingenio 3D, utilicé la calculadora web. Quiero cotizar un proyecto estimado de ${hours}h en ${matName} por aproximadamente $${total.toLocaleString('es-CO')} COP.`);
+            btnCalc.href = `https://wa.me/573137807079?text=${msg}`;
+        }
+
+        matSelect.addEventListener('change', updateCalculator);
+        hoursInput.addEventListener('input', updateCalculator);
+        postCheck.addEventListener('change', updateCalculator);
+    </script>
+</body>
+</html>
