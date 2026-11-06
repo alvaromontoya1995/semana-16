@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo & Servicios Pro | Ingenio 3D</title>
+    <title>Catálogo, Guía & Servicios Pro | Ingenio 3D</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Space Grotesk & Inter -->
@@ -148,10 +148,8 @@
             </div>
         </div>
 
-        <!-- Grid Adaptable de Productos (1 Col Celular / 2 Col Tablet / 3 Col PC) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             
-            <!-- Tarjeta Producto -->
             <div class="product-card figuras glass-panel rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
                 <div class="space-y-4 sm:space-y-5">
                     <div class="flex justify-between items-start">
@@ -174,7 +172,6 @@
                 </div>
             </div>
 
-            <!-- Repetir estructura para tarjetas de letreros, organizadores, etc. -->
             <div class="product-card utilidad glass-panel rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
                 <div class="space-y-4 sm:space-y-5">
                     <div class="flex justify-between items-start">
@@ -222,8 +219,37 @@
         </div>
     </section>
 
-    <!-- Calculadora Interactiva Responsiva -->
-    <section id="calculadora" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- NUEVA SECCIÓN: GUÍA TÉCNICA PARA ENVIAR TUS ARCHIVOS -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest font-heading">Recomendaciones de Ingeniería</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Guía Rápida para Preparar tu Archivo .STL</h3>
+                <p class="text-xs text-slate-400">Sigue estos consejos para asegurar que tu diseño imprima sin fallas de geometría o resistencia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-brand-dark/60 p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-mono font-bold">01</div>
+                    <h4 class="font-bold text-white text-sm font-heading">Mallas Herméticas (Manifold)</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Asegúrate de que el modelo 3D no tenga caras abiertas, agujeros o huecos invisibles para evitar errores en el software de laminación.</p>
+                </div>
+                <div class="bg-brand-dark/60 p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-mono font-bold">02</div>
+                    <h4 class="font-bold text-white text-sm font-heading">Grosor Mínimo de Pared</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Para piezas en FDM, se recomienda un espesor de al menos 1.2 mm a 2 mm en paredes para garantizar solidez estructural.</p>
+                </div>
+                <div class="bg-brand-dark/60 p-6 rounded-2xl border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-mono font-bold">03</div>
+                    <h4 class="font-bold text-white text-sm font-heading">Orientación &amp; Soportes</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Evalúa la posición de apoyo. Si la pieza requiere soportes estéticos en zonas visibles, te asesoramos en la mejor orientación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora Interactiva -->
+    <section id="calculadora" class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="glass-panel p-6 sm:p-12 rounded-3xl border border-brand-accent/40 glow-accent relative overflow-hidden">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
@@ -270,6 +296,43 @@
                     </a>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+            <span class="text-xs font-bold text-brand-accent uppercase tracking-widest font-heading">Dudas Habituales</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Preguntas Frecuentes</h3>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-white text-sm sm:text-base font-heading flex items-center gap-3">
+                    <i class="fa-solid fa-circle-question text-brand-accent"></i> ¿En qué formato debo enviar mis archivos para cotizar?
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-400 pl-7 leading-relaxed">
+                    Preferiblemente en formato <strong>.STL</strong> o <strong>.STEP</strong> a escala real. Si no tienes el archivo pero cuentas con una idea, boceto o medidas, nuestro equipo de diseño CAD puede modelarlo por ti desde cero.
+                </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-white text-sm sm:text-base font-heading flex items-center gap-3">
+                    <i class="fa-solid fa-circle-question text-brand-accent"></i> ¿Cuál es la diferencia entre PLA y PETG?
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-400 pl-7 leading-relaxed">
+                    El <strong>PLA</strong> es perfecto para figuras, letreros y piezas decorativas por su gran variedad de colores y acabado impecable. El <strong>PETG</strong> es más resistente a los impactos, flexible y tolera mejor la temperatura, ideal para repuestos y piezas mecánicas funcionales.
+                </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-white text-sm sm:text-base font-heading flex items-center gap-3">
+                    <i class="fa-solid fa-circle-question text-brand-accent"></i> ¿Hacen envíos fuera de Medellín?
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-400 pl-7 leading-relaxed">
+                    Sí. Realizamos entregas locales directas en todo el Valle de Aburrá mediante mensajería urbana y despachos certificados a nivel nacional a través de empresas de transporte aliadas.
+                </p>
             </div>
         </div>
     </section>
