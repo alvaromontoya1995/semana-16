@@ -36,30 +36,18 @@
     </script>
     <style>
         body { background-color: #070A11; color: #F3F4F6; font-family: 'Inter', sans-serif; }
-        
-        /* Malla industrial de fondo */
         .grid-bg {
             background-image: linear-gradient(to right, rgba(0, 229, 255, 0.03) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
             background-size: 32px 32px;
         }
-
-        .glow-accent {
-            box-shadow: 0 0 50px -10px rgba(0, 229, 255, 0.25);
-        }
-
-        .glow-card:hover {
-            box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.3);
-            border-color: rgba(0, 229, 255, 0.5);
-        }
-
-        /* Glassmorphism de precisión */
+        .glow-accent { box-shadow: 0 0 50px -10px rgba(0, 229, 255, 0.25); }
+        .glow-card:hover { box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.3); border-color: rgba(0, 229, 255, 0.5); }
         .glass-panel {
             background: rgba(15, 20, 32, 0.75);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.07);
         }
-
         .gradient-text {
             background: linear-gradient(135deg, #FFFFFF 30%, #00E5FF 100%);
             -webkit-background-clip: text;
@@ -69,79 +57,73 @@
 </head>
 <body class="bg-brand-dark text-slate-100 antialiased grid-bg selection:bg-brand-accent selection:text-slate-950">
 
-    <!-- Header Fijo de Alto Rendimiento -->
+    <!-- Header Fijo Responsivo -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-heading font-extrabold text-2xl tracking-wider text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-heading font-extrabold text-xl sm:text-2xl tracking-wider text-white">
                 INGENIO <span class="text-brand-accent">3D</span>
             </a>
-            <nav class="hidden md:flex gap-8 items-center text-xs font-semibold uppercase tracking-widest">
+            <nav class="hidden md:flex gap-6 lg:gap-8 items-center text-xs font-semibold uppercase tracking-widest">
                 <a href="index.html" class="text-slate-300 hover:text-brand-accent transition-colors">Inicio</a>
                 <a href="nosotros.html" class="text-slate-300 hover:text-brand-accent transition-colors">Nosotros</a>
                 <a href="servicios.html" class="text-brand-accent font-bold">Servicios &amp; Catálogo</a>
                 <a href="contacto.html" class="text-slate-300 hover:text-brand-accent transition-colors">Contacto</a>
             </nav>
             <div>
-                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-lg shadow-cyan-500/20">
-                    <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Cotización Exprés
+                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-bold text-[11px] sm:text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-lg shadow-cyan-500/20">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1"></i> <span class="hidden sm:inline">Cotización Exprés</span><span class="sm:hidden">Cotizar</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero de Alto Impacto con Selector Tecnológico -->
-    <section class="pt-40 pb-20 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Hero Servicios -->
+    <section class="pt-32 sm:pt-40 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-accent/40 text-brand-accent text-xs font-bold uppercase tracking-wider">
+            <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-brand-accent/40 text-brand-accent text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                     <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span> Plataforma de Manufactura Aditiva
                 </div>
-                <h1 class="text-4xl sm:text-6xl font-extrabold font-heading text-white tracking-tight leading-none">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
                     Manufactura 3D de <span class="gradient-text">Grado Industrial.</span>
                 </h1>
-                <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p class="text-slate-400 text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
                     Sistemas automatizados de impresión en filamento FDM y resina SLA de alta resolución. Cotización en tiempo real y acabado profesional para cada archivo .STL.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#calculadora" class="px-7 py-4 rounded-xl bg-brand-accent text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 justify-center lg:justify-start">
+                    <a href="#calculadora" class="px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-brand-accent text-slate-950 font-bold text-xs uppercase tracking-wider text-center hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20">
                         <i class="fa-solid fa-calculator mr-2"></i> Usar Cotizador Interactivo
                     </a>
-                    <a href="#catalogo" class="px-7 py-4 rounded-xl glass-panel text-white font-bold text-xs uppercase tracking-wider hover:border-brand-accent/50 transition-all">
+                    <a href="#catalogo" class="px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl glass-panel text-white font-bold text-xs uppercase tracking-wider text-center hover:border-brand-accent/50 transition-all">
                         Explorar Catálogo
                     </a>
                 </div>
             </div>
 
-            <!-- Card interactiva de Especificación Rápida -->
             <div class="lg:col-span-5">
-                <div class="glass-panel p-8 rounded-3xl border border-brand-accent/30 glow-accent space-y-6">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                        <span class="text-xs font-bold font-heading uppercase text-brand-accent tracking-widest"><i class="fa-solid fa-sliders mr-2"></i> Selector de Tecnología</span>
-                        <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2.5 py-1 rounded-full font-mono font-bold">MEDELLÍN 3D</span>
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-brand-accent/30 glow-accent space-y-4 sm:space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="text-[11px] sm:text-xs font-bold font-heading uppercase text-brand-accent tracking-widest"><i class="fa-solid fa-sliders mr-2"></i> Selector de Tecnología</span>
+                        <span class="text-[9px] sm:text-[10px] bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded-full font-mono font-bold">MEDELLÍN 3D</span>
                     </div>
 
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-2xl bg-brand-dark/80 border border-slate-800 space-y-2 cursor-pointer hover:border-brand-accent transition-all" onclick="selectTech('fdm')">
+                    <div class="space-y-3">
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-brand-dark/80 border border-slate-800 space-y-1 sm:space-y-2">
                             <div class="flex justify-between items-center">
-                                <span class="font-bold font-heading text-sm text-white">FDM Multimaterial (PLA / PETG)</span>
-                                <i class="fa-solid fa-layer-group text-brand-accent"></i>
+                                <span class="font-bold font-heading text-xs sm:text-sm text-white">FDM Multimaterial (PLA / PETG)</span>
+                                <i class="fa-solid fa-layer-group text-brand-accent text-sm"></i>
                             </div>
-                            <p class="text-xs text-slate-400">Ideal para piezas de volumen, carcasas, letreros y prototipos funcionales.</p>
+                            <p class="text-[11px] sm:text-xs text-slate-400">Ideal para piezas de volumen, carcasas, letreros y prototipos funcionales.</p>
                         </div>
 
-                        <div class="p-4 rounded-2xl bg-brand-dark/80 border border-slate-800 space-y-2 cursor-pointer hover:border-brand-accent transition-all" onclick="selectTech('sla')">
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-brand-dark/80 border border-slate-800 space-y-1 sm:space-y-2">
                             <div class="flex justify-between items-center">
-                                <span class="font-bold font-heading text-sm text-white">Resina SLA UV (Alta Definición)</span>
-                                <i class="fa-solid fa-gem text-brand-accent"></i>
+                                <span class="font-bold font-heading text-xs sm:text-sm text-white">Resina SLA UV (Alta Definición)</span>
+                                <i class="fa-solid fa-gem text-brand-accent text-sm"></i>
                             </div>
-                            <p class="text-xs text-slate-400">Detalles micrométricos a 0.05mm. Perfecto para miniaturas y joyería.</p>
+                            <p class="text-[11px] sm:text-xs text-slate-400">Detalles micrométricos a 0.05mm. Perfecto para miniaturas y joyería.</p>
                         </div>
-                    </div>
-
-                    <div class="pt-2 flex justify-between text-[11px] font-mono text-slate-400">
-                        <span>Tolerancia: <strong class="text-white">± 0.1mm</strong></span>
-                        <span>Multi-Color: <strong class="text-brand-accent">Hasta 4 tonos</strong></span>
                     </div>
                 </div>
             </div>
@@ -149,218 +131,118 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRODUCTOS CON FILTROS EN TIEMPO REAL -->
-    <section id="catalogo" class="py-20 max-w-7xl mx-auto px-6 space-y-12">
+    <!-- Catálogo de Productos con Filtros -->
+    <section id="catalogo" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-12">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-8">
-            <div class="space-y-2">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-6 sm:pb-8">
+            <div class="space-y-1 sm:space-y-2 text-center md:text-left">
                 <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest font-heading">Catálogo de Piezas &amp; Modelos</h2>
-                <h3 class="text-3xl font-extrabold font-heading text-white">Selecciona tu Categoría</h3>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Selecciona tu Categoría</h3>
             </div>
-            <!-- Filtros de Categoría -->
-            <div class="flex flex-wrap gap-2" id="filter-container">
-                <button onclick="filterProducts('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold bg-brand-accent text-slate-950 transition-all">Todos</button>
-                <button onclick="filterProducts('figuras')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Figuras &amp; SLA</button>
-                <button onclick="filterProducts('utilidad')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Organizadores &amp; Utiles</button>
-                <button onclick="filterProducts('ingenieria')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Piezas Técnicas</button>
+            
+            <div class="flex flex-wrap justify-center gap-2" id="filter-container">
+                <button onclick="filterProducts('all')" class="filter-btn active px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-accent text-slate-950 transition-all">Todos</button>
+                <button onclick="filterProducts('figuras')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Figuras &amp; SLA</button>
+                <button onclick="filterProducts('utilidad')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Organizadores</button>
+                <button onclick="filterProducts('ingenieria')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent transition-all">Piezas Técnicas</button>
             </div>
         </div>
 
-        <!-- Grid Dinámico de Productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Grid Adaptable de Productos (1 Col Celular / 2 Col Tablet / 3 Col PC) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             
-            <!-- Producto 1 -->
-            <div class="product-card figuras glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
+            <!-- Tarjeta Producto -->
+            <div class="product-card figuras glass-panel rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
+                <div class="space-y-4 sm:space-y-5">
                     <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-lg sm:text-xl">
                             <i class="fa-solid fa-chess-knight"></i>
                         </div>
-                        <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[10px] font-bold uppercase">SLA / FDM</span>
+                        <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase">SLA / FDM</span>
                     </div>
                     <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Figuras &amp; Coleccionables</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Miniaturas, estatuas de anime y coleccionables con post-procesado UV y superficie ultra suave.</p>
+                        <h4 class="text-lg sm:text-xl font-bold font-heading text-white">Figuras &amp; Coleccionables</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 sm:mt-2 leading-relaxed">Miniaturas, estatuas de anime y coleccionables con post-procesado UV y superficie ultra suave.</p>
                     </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Capa hasta 0.05 mm sin marcas visibles</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Lista para imprimar y pintar</li>
-                    </ul>
                 </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
+                <div class="pt-5 sm:pt-6 border-t border-slate-800/80 mt-5 sm:mt-6 flex items-center justify-between">
                     <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">Desde</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">$30.000 COP</span>
+                        <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase font-bold">Desde</span>
+                        <span class="text-brand-accent font-bold font-mono text-sm sm:text-base">$30.000 COP</span>
                     </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20Figura" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20Figura" target="_blank" class="px-4 py-2 sm:px-5 sm:py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
                 </div>
             </div>
 
-            <!-- Producto 2 -->
-            <div class="product-card figuras glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
+            <!-- Repetir estructura para tarjetas de letreros, organizadores, etc. -->
+            <div class="product-card utilidad glass-panel rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
+                <div class="space-y-4 sm:space-y-5">
                     <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
-                            <i class="fa-solid fa-image"></i>
-                        </div>
-                        <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[10px] font-bold uppercase">FDM Especial</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Litofanías Retroiluminadas</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Fotografías grabadas en relieve 3D que cobran vida al trasluz. Regalos únicos con iluminación LED.</p>
-                    </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Incluye base estilizada personalizada</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Múltiples formatos y marcos</li>
-                    </ul>
-                </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
-                    <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">Desde</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">$100.000 COP</span>
-                    </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20Litofania" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="product-card utilidad glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-lg sm:text-xl">
                             <i class="fa-solid fa-font"></i>
                         </div>
-                        <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[10px] font-bold uppercase">Multicolor FDM</span>
+                        <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase">Multicolor</span>
                     </div>
                     <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Letreros &amp; Logos 3D</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Logotipos corporativos, identificadores y señalética de marca en relieve con múltiples capas de color.</p>
+                        <h4 class="text-lg sm:text-xl font-bold font-heading text-white">Letreros &amp; Logos 3D</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 sm:mt-2 leading-relaxed">Logotipos corporativos, identificadores y señalética de marca en relieve con múltiples capas de color.</p>
                     </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Cambio cromático sin pintura</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Acabado brillante o mate</li>
-                    </ul>
                 </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
+                <div class="pt-5 sm:pt-6 border-t border-slate-800/80 mt-5 sm:mt-6 flex items-center justify-between">
                     <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">Desde</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">$45.000 COP</span>
+                        <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase font-bold">Desde</span>
+                        <span class="text-brand-accent font-bold font-mono text-sm sm:text-base">$45.000 COP</span>
                     </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Letrero%203D" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Letrero%203D" target="_blank" class="px-4 py-2 sm:px-5 sm:py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
                 </div>
             </div>
 
-            <!-- Producto 4 -->
-            <div class="product-card utilidad glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
+            <div class="product-card ingenieria glass-panel rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
+                <div class="space-y-4 sm:space-y-5">
                     <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
-                            <i class="fa-solid fa-box"></i>
-                        </div>
-                        <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 font-mono text-[10px] font-bold uppercase">Desk Setup</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Organizadores &amp; Dockings</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Soportes ergonómicos para auriculares, mandos de consola, organizadores de cables y bases modulares.</p>
-                    </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Estructura reforzada antichoque</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Diseños geométricos modernos</li>
-                    </ul>
-                </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
-                    <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">Desde</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">$30.000 COP</span>
-                    </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20un%20Organizador" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
-                </div>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="product-card ingenieria glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-lg sm:text-xl">
                             <i class="fa-solid fa-gears"></i>
                         </div>
-                        <span class="px-3 py-1 rounded-full bg-blue-950 text-blue-400 font-mono text-[10px] font-bold uppercase">PETG Técnico</span>
+                        <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase">PETG Técnico</span>
                     </div>
                     <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Piezas &amp; Repuestos Mecánicos</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Fabricación de engranajes, carcasas, bujes y piezas de repuesto para maquinaria o vehículos.</p>
+                        <h4 class="text-lg sm:text-xl font-bold font-heading text-white">Piezas &amp; Repuestos Mecánicos</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 sm:mt-2 leading-relaxed">Fabricación de engranajes, carcasas y repuestos para maquinaria o vehículos con tolerancias ajustadas.</p>
                     </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Alta tolerancia al calor y fricción</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Ajuste milimétrico para ensambles</li>
-                    </ul>
                 </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
+                <div class="pt-5 sm:pt-6 border-t border-slate-800/80 mt-5 sm:mt-6 flex items-center justify-between">
                     <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">A Medida</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">Según STL</span>
+                        <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase font-bold">A Medida</span>
+                        <span class="text-brand-accent font-bold font-mono text-sm sm:text-base">Según STL</span>
                     </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20pieza%20tecnica" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
-                </div>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="product-card ingenieria glass-panel rounded-3xl p-7 flex flex-col justify-between border border-slate-800 glow-card transition-all duration-300">
-                <div class="space-y-5">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
-                            <i class="fa-solid fa-compass-drafting"></i>
-                        </div>
-                        <span class="px-3 py-1 rounded-full bg-blue-950 text-blue-400 font-mono text-[10px] font-bold uppercase">CAD 3D</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold font-heading text-white">Ingeniería Inversa &amp; CAD</h4>
-                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Recreamos digitalmente cualquier pieza física desgastada o plana para llevarla a producción 3D.</p>
-                    </div>
-                    <ul class="text-[11px] text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Modelado en AutoCAD / Rhino</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-accent text-[10px]"></i> Entrega de archivos .STEP / .STL</li>
-                    </ul>
-                </div>
-                <div class="pt-6 border-t border-slate-800/80 mt-6 flex items-center justify-between">
-                    <div>
-                        <span class="block text-[10px] text-slate-400 uppercase font-bold">Servicio</span>
-                        <span class="text-brand-accent font-bold font-mono text-base">Diseño 3D</span>
-                    </div>
-                    <a href="https://wa.me/573137807079?text=Hola,%20necesito%20servicio%20de%20Modelado%20CAD" target="_blank" class="px-5 py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Consultar</a>
+                    <a href="https://wa.me/573137807079?text=Hola,%20quiero%20cotizar%20una%20pieza%20tecnica" target="_blank" class="px-4 py-2 sm:px-5 sm:py-2.5 bg-brand-accent text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-300 transition-colors">Cotizar</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- CALCULADORA DE PRESUPUESTO PRO (TIPO CONSOLA DE CONTROL) -->
-    <section id="calculadora" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-brand-accent/40 glow-accent relative overflow-hidden">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Calculadora Interactiva Responsiva -->
+    <section id="calculadora" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="glass-panel p-6 sm:p-12 rounded-3xl border border-brand-accent/40 glow-accent relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950 border border-brand-accent/40 text-brand-accent text-xs font-mono font-bold">
+                <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 border border-brand-accent/40 text-brand-accent text-[10px] sm:text-xs font-mono font-bold">
                         <i class="fa-solid fa-terminal"></i> CALCULADORA DE MANUFACTURA V2.0
                     </div>
-                    <h3 class="text-3xl font-extrabold font-heading text-white">Simulador de Cotización en Tiempo Real</h3>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Ajusta los parámetros para obtener un estimado exacto según el material y las horas requeridas en nuestra granja de impresión.
-                    </p>
-
-                    <div class="space-y-6 pt-4">
-                        <!-- Selector Material -->
+                    <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Simulador de Cotización en Tiempo Real</h3>
+                    
+                    <div class="space-y-4 sm:space-y-6 pt-2">
                         <div>
                             <label class="block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wider font-heading">1. Selecciona Material</label>
-                            <select id="calc-material" class="w-full bg-brand-dark border border-slate-700 rounded-xl p-4 text-xs font-semibold text-white focus:border-brand-accent outline-none">
-                                <option value="15000">PLA Estándar ($15.000 COP / Hora de Impresión)</option>
-                                <option value="20000">PETG Alta Resistencia ($20.000 COP / Hora de Impresión)</option>
-                                <option value="25000">Resina SLA Ultra Detalle ($25.000 COP / Hora Estimada)</option>
+                            <select id="calc-material" class="w-full bg-brand-dark border border-slate-700 rounded-xl p-3.5 text-xs font-semibold text-white focus:border-brand-accent outline-none">
+                                <option value="15000">PLA Estándar ($15.000 COP / Hora)</option>
+                                <option value="20000">PETG Alta Resistencia ($20.000 COP / Hora)</option>
+                                <option value="25000">Resina SLA Ultra Detalle ($25.000 COP / Hora)</option>
                             </select>
                         </div>
 
-                        <!-- Range Horas -->
                         <div>
                             <div class="flex justify-between text-xs font-bold text-slate-300 mb-2 uppercase tracking-wider font-heading">
                                 <span>2. Tiempo Estimado</span>
@@ -369,110 +251,45 @@
                             <input type="range" id="calc-hours" min="1" max="30" value="3" class="w-full h-2 bg-brand-dark rounded-lg appearance-none cursor-pointer accent-cyan-400">
                         </div>
 
-                        <!-- Check Post-procesado -->
-                        <div class="flex items-center gap-3 bg-brand-dark/60 p-4 rounded-2xl border border-slate-800">
+                        <div class="flex items-center gap-3 bg-brand-dark/60 p-3.5 rounded-2xl border border-slate-800">
                             <input type="checkbox" id="calc-post" class="w-4 h-4 accent-cyan-400 rounded cursor-pointer">
                             <label for="calc-post" class="text-xs font-semibold text-slate-300 cursor-pointer">
-                                Incluir Acabado &amp; Pulido Profesional (+ $15.000 COP)
+                                Acabado &amp; Pulido Profesional (+ $15.000 COP)
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel de Resultado -->
-                <div class="lg:col-span-5 bg-brand-dark p-8 rounded-3xl border border-slate-800 text-center space-y-6 relative">
-                    <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-widest block">Presupuesto Estimado</span>
-                    
-                    <div class="py-4">
-                        <span id="total-price" class="text-4xl sm:text-5xl font-extrabold font-mono text-brand-accent tracking-tight">$45.000 COP</span>
+                <div class="lg:col-span-5 bg-brand-dark p-6 sm:p-8 rounded-3xl border border-slate-800 text-center space-y-4 sm:space-y-6">
+                    <span class="text-[10px] sm:text-[11px] font-mono font-bold text-slate-400 uppercase tracking-widest block">Presupuesto Estimado</span>
+                    <div class="py-2">
+                        <span id="total-price" class="text-3xl sm:text-5xl font-extrabold font-mono text-brand-accent tracking-tight">$45.000 COP</span>
                     </div>
-
-                    <p class="text-[11px] text-slate-400 leading-relaxed border-t border-slate-800/80 pt-4">
-                        *El valor definitivo se confirma al evaluar el volumen real (.STL) y la densidad de relleno en Bambu Studio.
-                    </p>
-
-                    <a id="btn-calc-whatsapp" href="https://wa.me/573137807079" target="_blank" class="block w-full py-4 rounded-xl bg-brand-accent text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20">
-                        <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Enviar Cotización al WhatsApp
+                    <a id="btn-calc-whatsapp" href="https://wa.me/573137807079" target="_blank" class="block w-full py-3.5 sm:py-4 rounded-xl bg-brand-accent text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20">
+                        <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Cotizar por WhatsApp
                     </a>
                 </div>
 
             </div>
-
-        </div>
-    </section>
-
-    <!-- FICHA TÉCNICA DE MATERIALES -->
-    <section class="py-20 max-w-7xl mx-auto px-6 space-y-12">
-        <div class="text-center max-w-2xl mx-auto space-y-2">
-            <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest font-heading">Especificaciones Técnicas</h2>
-            <h3 class="text-3xl font-extrabold font-heading text-white">Comparativa de Filamentos &amp; Resinas</h3>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div class="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h4 class="font-bold font-heading text-white text-base">PLA Premium</h4>
-                    <span class="text-brand-accent font-mono text-xs font-bold">$15.000/hr</span>
-                </div>
-                <ul class="text-xs text-slate-400 space-y-2">
-                    <li><strong>Resistencia:</strong> Media</li>
-                    <li><strong>Acabado:</strong> Superficie brillante / mate</li>
-                    <li><strong>Uso:</strong> Figuras, litofanías, organizadores</li>
-                    <li><strong>Tolerancia Térmica:</strong> Hasta 60°C</li>
-                </ul>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h4 class="font-bold font-heading text-white text-base">PETG Técnico</h4>
-                    <span class="text-brand-accent font-mono text-xs font-bold">$20.000/hr</span>
-                </div>
-                <ul class="text-xs text-slate-400 space-y-2">
-                    <li><strong>Resistencia:</strong> Muy Alta (Impactos)</li>
-                    <li><strong>Acabado:</strong> Semi-translúcido / Tenaz</li>
-                    <li><strong>Uso:</strong> Engranajes, carcasas, repuestos</li>
-                    <li><strong>Tolerancia Térmica:</strong> Hasta 80°C</li>
-                </ul>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h4 class="font-bold font-heading text-white text-base">Resina SLA UV</h4>
-                    <span class="text-brand-accent font-mono text-xs font-bold">A Medida</span>
-                </div>
-                <ul class="text-xs text-slate-400 space-y-2">
-                    <li><strong>Resistencia:</strong> Rígida / Detalle fino</li>
-                    <li><strong>Acabado:</strong> Micrométrico (sin capa)</li>
-                    <li><strong>Uso:</strong> Miniaturas, joyería, prototipos</li>
-                    <li><strong>Resolución:</strong> 0.05 mm</li>
-                </ul>
-            </div>
-
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-surface border-t border-slate-800 py-12 text-center text-xs text-slate-500 space-y-4">
+    <footer class="bg-brand-surface border-t border-slate-800 py-10 sm:py-12 text-center text-xs text-slate-500 space-y-4">
         <p class="font-heading font-extrabold text-sm text-white tracking-widest">INGENIO <span class="text-brand-accent">3D</span></p>
         <p>&copy; 2026 Ingenio 3D — Medellín, Colombia. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- LÓGICA DE INTERACCIÓN & CALCULADORA -->
     <script>
-        // Lógica de Filtro de Productos
         function filterProducts(category) {
             const cards = document.querySelectorAll('.product-card');
             const buttons = document.querySelectorAll('.filter-btn');
-
             buttons.forEach(btn => {
                 btn.classList.remove('bg-brand-accent', 'text-slate-950');
                 btn.classList.add('bg-brand-surface', 'text-slate-300');
             });
-
             event.target.classList.remove('bg-brand-surface', 'text-slate-300');
             event.target.classList.add('bg-brand-accent', 'text-slate-950');
-
             cards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
                     card.style.display = 'flex';
@@ -482,7 +299,6 @@
             });
         }
 
-        // Lógica de la Calculadora
         const matSelect = document.getElementById('calc-material');
         const hoursInput = document.getElementById('calc-hours');
         const hoursVal = document.getElementById('hours-val');
@@ -495,12 +311,10 @@
             const hours = parseInt(hoursInput.value);
             const postCost = postCheck.checked ? 15000 : 0;
             const total = (matCost * hours) + postCost;
-
             hoursVal.textContent = hours + (hours === 1 ? ' hora' : ' horas');
             totalPrice.textContent = '$' + total.toLocaleString('es-CO') + ' COP';
-
             const matName = matSelect.options[matSelect.selectedIndex].text.split(' (')[0];
-            const msg = encodeURIComponent(`Hola Ingenio 3D, calculé en la web un proyecto de ${hours}h en ${matName} por aprox. $${total.toLocaleString('es-CO')} COP. Quiero confirmar la cotización.`);
+            const msg = encodeURIComponent(`Hola Ingenio 3D, calculé un proyecto de ${hours}h en ${matName} por aprox. $${total.toLocaleString('es-CO')} COP. Quiero cotizar.`);
             btnCalc.href = `https://wa.me/573137807079?text=${msg}`;
         }
 

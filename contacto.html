@@ -36,30 +36,17 @@
     </script>
     <style>
         body { background-color: #070A11; color: #F3F4F6; font-family: 'Inter', sans-serif; }
-        
-        /* Malla industrial de fondo */
         .grid-bg {
             background-image: linear-gradient(to right, rgba(0, 229, 255, 0.03) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
             background-size: 32px 32px;
         }
-
-        .glow-accent {
-            box-shadow: 0 0 50px -10px rgba(0, 229, 255, 0.25);
-        }
-
-        .glow-card:hover {
-            box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.3);
-            border-color: rgba(0, 229, 255, 0.5);
-        }
-
-        /* Glassmorphism de precisión */
+        .glow-accent { box-shadow: 0 0 50px -10px rgba(0, 229, 255, 0.25); }
         .glass-panel {
             background: rgba(15, 20, 32, 0.75);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.07);
         }
-
         .gradient-text {
             background: linear-gradient(135deg, #FFFFFF 30%, #00E5FF 100%);
             -webkit-background-clip: text;
@@ -69,83 +56,83 @@
 </head>
 <body class="bg-brand-dark text-slate-100 antialiased grid-bg selection:bg-brand-accent selection:text-slate-950">
 
-    <!-- Header Fijo de Alto Rendimiento -->
+    <!-- Header Fijo Responsivo -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-heading font-extrabold text-2xl tracking-wider text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-heading font-extrabold text-xl sm:text-2xl tracking-wider text-white">
                 INGENIO <span class="text-brand-accent">3D</span>
             </a>
-            <nav class="hidden md:flex gap-8 items-center text-xs font-semibold uppercase tracking-widest">
+            <nav class="hidden md:flex gap-6 lg:gap-8 items-center text-xs font-semibold uppercase tracking-widest">
                 <a href="index.html" class="text-slate-300 hover:text-brand-accent transition-colors">Inicio</a>
                 <a href="nosotros.html" class="text-slate-300 hover:text-brand-accent transition-colors">Nosotros</a>
                 <a href="servicios.html" class="text-slate-300 hover:text-brand-accent transition-colors">Servicios &amp; Catálogo</a>
                 <a href="contacto.html" class="text-brand-accent font-bold">Contacto</a>
             </nav>
             <div>
-                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-lg shadow-cyan-500/20">
-                    <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Cotización Exprés
+                <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20cotizar" target="_blank" class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-bold text-[11px] sm:text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-lg shadow-cyan-500/20">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1"></i> <span class="hidden sm:inline">Cotización Exprés</span><span class="sm:hidden">Cotizar</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Asimétrico: Canales de Atención Directa -->
-    <section class="pt-40 pb-16 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Hero Asimétrico -->
+    <section class="pt-32 sm:pt-40 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div class="lg:col-span-6 space-y-6">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-accent/40 text-brand-accent text-xs font-bold uppercase tracking-wider">
+            <div class="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-brand-accent/40 text-brand-accent text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                     <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span> Respuesta Inmediata en Medellín
                 </div>
-                <h1 class="text-4xl sm:text-6xl font-extrabold font-heading text-white tracking-tight leading-none">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
                     Conecta con Nuestro <span class="gradient-text">Taller 3D.</span>
                 </h1>
-                <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p class="text-slate-400 text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
                     Estamos listos para evaluar tus archivos .STL, asesorarte en la selección de materiales o coordinar la entrega de tus proyectos en el Valle de Aburrá.
                 </p>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                    <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20iniciar%20un%20proyecto" target="_blank" class="glass-panel p-5 rounded-2xl border border-slate-800 glow-card flex items-center gap-4 transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <a href="https://wa.me/573137807079?text=Hola%20Ingenio%203D,%20quiero%20iniciar%20un%20proyecto" target="_blank" class="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-center gap-4 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg sm:text-xl">
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <div>
-                            <span class="block text-[10px] text-slate-400 uppercase font-bold font-mono">Canal Principal</span>
-                            <span class="font-bold text-sm text-white font-heading">+57 313 780 7079</span>
+                        <div class="text-left">
+                            <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase font-bold font-mono">Canal Principal</span>
+                            <span class="font-bold text-xs sm:text-sm text-white font-heading">+57 313 780 7079</span>
                         </div>
                     </a>
 
-                    <div class="glass-panel p-5 rounded-2xl border border-slate-800 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-xl">
+                    <div class="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-center gap-4 text-left">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-lg sm:text-xl">
                             <i class="fa-solid fa-clock"></i>
                         </div>
                         <div>
-                            <span class="block text-[10px] text-slate-400 uppercase font-bold font-mono">Recepción 3D</span>
+                            <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase font-bold font-mono">Recepción 3D</span>
                             <span class="font-bold text-xs text-white font-heading">Lun - Sáb: 8am - 7pm</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Terminal de Envió de Mensaje Rápido -->
+            <!-- Formulario Responsivo -->
             <div class="lg:col-span-6">
-                <div class="glass-panel p-8 rounded-3xl border border-brand-accent/30 glow-accent space-y-6">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-brand-accent/30 glow-accent space-y-4 sm:space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 sm:pb-4">
                         <span class="text-xs font-bold font-heading uppercase text-brand-accent tracking-widest">
-                            <i class="fa-solid fa-paper-plane mr-2"></i> Generador de Solicitud Directa
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Generador de Solicitud
                         </span>
-                        <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2.5 py-1 rounded-full font-mono font-bold">WHATSAPP SYNC</span>
+                        <span class="text-[9px] sm:text-[10px] bg-cyan-950 text-cyan-300 px-2.5 py-1 rounded-full font-mono font-bold">WHATSAPP SYNC</span>
                     </div>
 
-                    <form id="contact-form" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                    <form id="contact-form" onsubmit="sendToWhatsApp(event)" class="space-y-3.5 sm:space-y-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider font-heading">Tu Nombre / Empresa</label>
-                            <input type="text" id="form-name" required placeholder="Ej. Carlos Mendoza" class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3.5 text-xs text-white focus:border-brand-accent outline-none">
+                            <label class="block text-xs font-bold text-slate-300 mb-1 sm:mb-1.5 uppercase tracking-wider font-heading">Tu Nombre / Empresa</label>
+                            <input type="text" id="form-name" required placeholder="Ej. Carlos Mendoza" class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3 text-xs text-white focus:border-brand-accent outline-none">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider font-heading">Tipo de Requerimiento</label>
-                            <select id="form-type" class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3.5 text-xs text-white focus:border-brand-accent outline-none">
+                            <label class="block text-xs font-bold text-slate-300 mb-1 sm:mb-1.5 uppercase tracking-wider font-heading">Tipo de Requerimiento</label>
+                            <select id="form-type" class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3 text-xs text-white focus:border-brand-accent outline-none">
                                 <option value="Cotización de Archivo STL">Cotizar Archivo 3D (.STL / .STEP)</option>
                                 <option value="Modelado CAD desde Cero">Servicio de Diseñar / Modelar en 3D</option>
                                 <option value="Figura o Litografía Personalizada">Figura Coleccionable / Litofanía</option>
@@ -154,12 +141,12 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider font-heading">Detalles del Proyecto</label>
-                            <textarea id="form-msg" rows="3" required placeholder="Describe las medidas aproximadas, material preferido o uso de la pieza..." class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3.5 text-xs text-white focus:border-brand-accent outline-none resize-none"></textarea>
+                            <label class="block text-xs font-bold text-slate-300 mb-1 sm:mb-1.5 uppercase tracking-wider font-heading">Detalles del Proyecto</label>
+                            <textarea id="form-msg" rows="3" required placeholder="Medidas aproximadas, material o uso final..." class="w-full bg-brand-dark border border-slate-800 rounded-xl p-3 text-xs text-white focus:border-brand-accent outline-none resize-none"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-xl shadow-cyan-500/20">
-                            <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Abrir Chat con Datos Formateados
+                        <button type="submit" class="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-brand-accent to-brand-neonBlue text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-xl shadow-cyan-500/20">
+                            <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Abrir Chat en WhatsApp
                         </button>
                     </form>
                 </div>
@@ -168,21 +155,17 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE UBICACIÓN TÁCTICA Y MAPA RETROILUMINADO -->
-    <section class="py-20 max-w-7xl mx-auto px-6 space-y-12">
-        
+    <!-- Mapa Táctico Cyberpunk -->
+    <section class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-12">
         <div class="text-center max-w-2xl mx-auto space-y-2">
             <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest font-heading">Centro de Operaciones</h2>
-            <h3 class="text-3xl font-extrabold font-heading text-white">Ubicación &amp; Cobertura de Entrega</h3>
-            <p class="text-xs text-slate-400">Atendemos pedidos en todo el Valle de Aburrá con opción de entrega local o envíos a nivel nacional.</p>
+            <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Ubicación &amp; Cobertura de Entrega</h3>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            
-            <!-- Ficha Técnica de Dirección -->
-            <div class="lg:col-span-4 glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+            <div class="lg:col-span-4 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+                <div class="space-y-4 sm:space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
                         <div class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent">
                             <i class="fa-solid fa-location-crosshairs"></i>
                         </div>
@@ -191,31 +174,21 @@
                             <span class="text-[10px] text-slate-400 font-mono">Sede Principal</span>
                         </div>
                     </div>
-
-                    <div class="space-y-4 text-xs">
-                        <div class="space-y-1">
+                    <div class="space-y-3 text-xs">
+                        <div>
                             <span class="text-[10px] text-brand-accent uppercase font-mono font-bold">Zona de Atención</span>
                             <p class="text-slate-300 font-semibold">Barrio Belén / Sector Sur-Occidente</p>
                         </div>
-                        <div class="space-y-1">
-                            <span class="text-[10px] text-brand-accent uppercase font-mono font-bold">Despachos Locales</span>
-                            <p class="text-slate-300">Envíos a través de mensajería urbana (Picap, Didi, Rappi) o retiro presencial acordado.</p>
-                        </div>
-                        <div class="space-y-1">
+                        <div>
                             <span class="text-[10px] text-brand-accent uppercase font-mono font-bold">Envíos Nacionales</span>
-                            <p class="text-slate-300">Despachos certificados a toda Colombia vía Interrapidísimo o Envía.</p>
+                            <p class="text-slate-300">Despachos certificados a toda Colombia.</p>
                         </div>
                     </div>
                 </div>
-
-                <a href="https://maps.google.com" target="_blank" class="w-full py-3.5 bg-brand-surface border border-slate-700 text-white rounded-xl text-xs font-bold text-center block hover:border-brand-accent transition-all">
-                    <i class="fa-solid fa-map-location-dot mr-2 text-brand-accent"></i> Abrir en Google Maps
-                </a>
             </div>
 
-            <!-- Mapa Interactivo Cyberpunk -->
-            <div class="lg:col-span-8 glass-panel p-3 rounded-3xl border border-slate-800 glow-card overflow-hidden">
-                <div class="w-full h-full min-h-[380px] rounded-2xl overflow-hidden relative">
+            <div class="lg:col-span-8 glass-panel p-2 sm:p-3 rounded-3xl border border-slate-800 glow-card overflow-hidden">
+                <div class="w-full h-full min-h-[300px] sm:min-h-[380px] rounded-2xl overflow-hidden relative">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.7583095304!2d-75.63238626639898!3d6.244203498967912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cf92b5b13d0!2sMedell%C3%ADn%2C%20Antioquia!5e0!2m3!1ses!2sco!4v1710000000000!5m2!1ses!2sco" 
                         class="w-full h-full border-0 grayscale invert opacity-80 hover:opacity-100 transition-opacity" 
@@ -225,25 +198,21 @@
                     </iframe>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-surface border-t border-slate-800 py-12 text-center text-xs text-slate-500 space-y-4">
+    <footer class="bg-brand-surface border-t border-slate-800 py-10 sm:py-12 text-center text-xs text-slate-500 space-y-4">
         <p class="font-heading font-extrabold text-sm text-white tracking-widest">INGENIO <span class="text-brand-accent">3D</span></p>
         <p>&copy; 2026 Ingenio 3D — Medellín, Colombia. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Lógica de Envió a WhatsApp -->
     <script>
         function sendToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('form-name').value;
             const type = document.getElementById('form-type').value;
             const msg = document.getElementById('form-msg').value;
-
             const text = encodeURIComponent(`Hola Ingenio 3D, mi nombre es ${name}.\n\nRequiero: ${type}\nDetalles: ${msg}`);
             window.open(`https://wa.me/573137807079?text=${text}`, '_blank');
         }
